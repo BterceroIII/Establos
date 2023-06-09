@@ -2,53 +2,87 @@
 @use 'base/mixins' as m;
 
 .header {
-    background-image: linear-gradient( to right, transparentize(v.$primario, .1 ) 0%, transparentize(v.$primario, .1 ) 100% ), url(../img/header_bg.jpg);
+    background-image: linear-gradient(to right, transparentize(v.$primario, .1) 0%, transparentize(v.$primario, .1) 100%), url(../img/hero2.webp);
     background-size: cover;
     background-position: center;
     padding: 3rem 0;
     position: relative;
 
-    @include m.tablet { 
+
+
+    @include m.tablet {
         padding: 3rem 0 20rem 0;
     }
 
     &__barra {
         display: flex;
         flex-direction: column;
-        align-items: center;
+        justify-content: space-between;
 
-        @include m.tablet { 
+        // .header__hamburgerLogo {
+        //     display: flex;
+        //     align-items: center;
+        // }
+
+        @include m.tablet {
             flex-direction: row;
             justify-content: space-between;
         }
     }
+
     &__logo {
-        width: 25rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__logo a {
+        display: flex;
+        text-decoration: none;
+        font-size: 5rem;
+        color: v.$blanco;
+
+        img {
+            margin-right: 2rem;
+            width: 8rem;
+        }
+
+        span {
+            color: v.$naranja;
+        }
     }
 
     &__contenido {
 
-        @include m.tablet { 
+        @include m.tablet {
             margin-top: 10rem;
             max-width: 50rem;
         }
     }
+
     &__heading {
+
         color: v.$blanco;
         text-align: center;
+
         @include m.tablet {
             text-align: left;
         }
     }
+
     &__texto {
         color: v.$blanco;
         display: none;
-        @include m.tablet { 
+
+        @include m.tablet {
             display: block;
         }
     }
+
     &__imagen {
         display: none;
+
         @include m.tablet {
             display: block;
             position: absolute;
@@ -59,21 +93,48 @@
             border-top-left-radius: 2rem;
             border-bottom-left-radius: 5rem;
         }
+
         @include m.desktopXL {
             max-width: 60rem;
         }
 
     }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        margin-bottom: 1rem;
+
+        .line {
+            width: 3rem;
+            height: 3px;
+            background: v.$blanco;
+            margin: 6px 0;
+        }
+
+        @include m.tablet {
+            display: none;
+
+        }
+    }
+
+
 }
 
 .navegacion {
+    height: 0;
+    opacity: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 5rem;
+    overflow: hidden;
+    transition: opacity 0.5s, height 0.5s;
 
-    @include m.tablet { 
+    @include m.tablet {
+        opacity: 1;
+        height: auto;
         flex-direction: row;
+        justify-content: space-between;
         gap: 2rem;
         margin-top: 0;
     }
@@ -86,9 +147,16 @@
         &:last-of-type {
             margin-bottom: 0;
         }
-        @include m.tablet { 
+
+        @include m.tablet {
             margin-bottom: 0;
         }
-        
+
     }
+
+}
+
+.navegacion.active {
+    opacity: 1;
+    height: auto;
 }

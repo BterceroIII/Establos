@@ -7,27 +7,39 @@
     <title>Real State</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="build/css/app.css">
 </head>
 <body>
 
     <header class="header">
         <div class="header__barra contenedor">
-            <div class="header__logo"> 
-                <img src="build/img/logo.svg" alt="logo real state"> 
-            </div>
+                <div class="header__logo"> 
+                    <div class="">
+                        <a href="index.html">
+                            <img src="build/img/logo.svg" alt="logo">
+                            Real<span>State</span>
+                        </a>
+                    </div>
+                    <div class="hamburger">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                    
+                </div>
+                <nav class="navegacion">
+                    <a class="navegacion__link" href="#">Nosotros</a>
+                    <a class="navegacion__link" href="#">Establos</a>
+                    <a class="navegacion__link" href="#">Blog</a>
+                    <a class="navegacion__link" href="#">Testimoniales</a>
+                    <a class="navegacion__link" href="#">Contacto</a>
+                    <a class="navegacion__link navegacion__link--carrito" href="#">
+                        <i class="fas fa-shopping-cart"></i> Carrito
+                    </a>
+                </nav>
 
-            <nav class="navegacion">
-                <a class="navegacion__link" href="#">Nosotros</a>
-                <a class="navegacion__link" href="#">Establos</a>
-                <a class="navegacion__link" href="#">Blog</a>
-                <a class="navegacion__link" href="#">Testimoniales</a>
-                <a class="navegacion__link" href="#">Contacto</a>
-                <a class="navegacion__link navegacion__link--carrito" href="#">
-                    <i class="fas fa-shopping-cart"></i> Carrito
-                </a>
-            </nav>
+                
         </div>
 
         <div class="contenedor">
@@ -36,7 +48,7 @@
                 <p class="header__texto">Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit ea pariatur dolores ducimus! Repellendus maiores nemo tempore, cupiditate pariatur expedita
                 </p>
 
-                <img class="header__imagen" src="build/img/imagenHeader.jpg" alt="imagen header">
+                <img class="header__imagen" src="build/img/hero1.webp" alt="imagen header">
             </div>
         </div>
     </header>
@@ -129,7 +141,7 @@
             <h2 class="testimoniales-blog__heading">Que dicen <span>Nuestros Clientes</span> </h2>
 
             <div class="testimonial">
-                <img class="testimonial__imagen" src="build/img/testimonial.jpg" alt="imagen testimonial">
+                <img class="testimonial__imagen" src="build/img/testimonial.webp" alt="imagen testimonial">
 
                 <div class="testimonial__contenido">
                     <p class="testimonial__nombre">Familia Hernández</p>
@@ -137,7 +149,7 @@
                 </div>
             </div>
             <div class="testimonial">
-                <img class="testimonial__imagen" src="build/img/testimonial.jpg" alt="imagen testimonial">
+                <img class="testimonial__imagen" src="build/img/testi2.webp" alt="imagen testimonial">
 
                 <div class="testimonial__contenido">
                     <p class="testimonial__nombre">Familia Tercero</p>
@@ -150,7 +162,7 @@
 
             <div class="entrada">
                 <div class="entrada__imagen-contenedor">
-                    <img class="entrada__imagen" src="build/img/blog_1.jpg" alt="imagen blog">
+                    <img class="entrada__imagen" src="build/img/blog1.webp" alt="imagen blog">
                 </div>
                 <div class="entrada__contenido">
                     <h3 class="entrada__nombre">Titulo aquí</h3>
@@ -162,7 +174,7 @@
 
             <div class="entrada">
                 <div class="entrada__imagen-contenedor">
-                    <img class="entrada__imagen" src="build/img/blog_2.jpg" alt="imagen blog">
+                    <img class="entrada__imagen" src="build/img/blog2.webp" alt="imagen blog">
                 </div>
                 <div class="entrada__contenido">
                     <h3 class="entrada__nombre">Titulo aquí</h3>
@@ -174,7 +186,7 @@
 
             <div class="entrada">
                 <div class="entrada__imagen-contenedor">
-                    <img class="entrada__imagen" src="build/img/blog_3.jpg" alt="imagen blog">
+                    <img class="entrada__imagen" src="build/img/galeria4.webp" alt="imagen blog">
                 </div>
                 <div class="entrada__contenido">
                     <h3 class="entrada__nombre">Titulo aquí</h3>
@@ -206,8 +218,11 @@
                 </p>
             </div>
 
-            <div class="footer__box">
-                <img src="build/img/logo.svg" alt="imagen logo">
+            <div class="footer__box footer__logo">
+                <a href="index.html">
+                    <img src="build/img/logo.svg" alt="logo">
+                    Real<span>State</span>
+                </a>
             </div>
         </div>
 
@@ -215,6 +230,7 @@
     </footer>
 
     <script src="js/app.js"></script>
+    <script src="js/nav.js"></script>
     <script src="https://kit.fontawesome.com/91c2d92c81.js" crossorigin="anonymous"></script>
 
 

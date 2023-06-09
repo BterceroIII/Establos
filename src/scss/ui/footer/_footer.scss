@@ -7,7 +7,7 @@
     margin-top: 5rem;
 
     &__grid {
-        @include m.tablet { 
+        @include m.tablet {
             @include m.grid(3, 2rem);
         }
     }
@@ -26,6 +26,7 @@
         display: flex;
         flex-direction: column;
     }
+
     &__link {
         color: v.$blanco;
         font-size: 1.8rem;
@@ -35,11 +36,36 @@
             margin-bottom: 0;
         }
     }
+
     &__copyright {
         background-color: darken(v.$primario, 10%);
         text-align: center;
         padding: 1rem;
         margin: 5rem 0 0 0;
         color: v.$blanco;
+    }
+
+    &__logo a {
+        display: flex;
+        text-decoration: none;
+        color: v.$blanco;
+        font-size: 3rem;
+
+        img {
+            margin-right: 2rem;
+            width: 5rem;
+        }
+
+        span {
+            color: v.$naranja;
+        }
+
+        @include m.tablet {
+            font-size: 5rem;
+
+            img {
+                width: 8rem;
+            }
+        }
     }
 }
