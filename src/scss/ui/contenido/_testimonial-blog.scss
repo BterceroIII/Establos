@@ -4,12 +4,12 @@
 .testimoniales-blog {
     margin-top: 5rem;
 
-    @include m.desktop { 
+    @include m.desktop {
         @include m.grid(3, 4rem);
     }
 
     &__blog {
-        @include m.desktop { 
+        @include m.desktop {
             grid-column: 2 / 4;
         }
     }
@@ -37,6 +37,7 @@
         font-size: 2.4rem;
         font-weight: 700;
     }
+
     &__texto {
         &::before {
             content: '';
@@ -56,15 +57,17 @@
     background-color: v.$blanco;
     margin-bottom: 2rem;
 
-    @include m.tablet { 
+    @include m.tablet {
         @include m.grid(5, 2rem);
         align-items: center;
     }
+
     &__imagen-contenedor {
-        @include m.tablet { 
+        @include m.tablet {
             grid-column: 1 / 3;
         }
     }
+
     &__imagen {
         height: 30rem;
         object-fit: cover;
@@ -73,17 +76,21 @@
 
     &__contenido {
         padding: 1rem;
-        @include m.tablet { 
+
+        @include m.tablet {
             grid-column: 3 / 6;
         }
     }
+
     &__meta {
         font-size: 1.4rem;
     }
+
     &__enlace {
         @include m.boton(v.$primario, v.$blanco);
         display: block;
-        @include m.tablet { 
+
+        @include m.tablet {
             display: inline-block;
         }
     }
