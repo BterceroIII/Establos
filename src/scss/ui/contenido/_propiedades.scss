@@ -31,7 +31,7 @@
     }
 
     @for $i from 1 through 6 {
-        $imagen: '../img/establo'+$i +'.jpg';
+        $imagen: '../img/establo'+$i +'.webp';
 
         &:nth-child(#{$i}) &__imagen {
             background-image: linear-gradient(to bottom, transparentize(v.$negro, 1%) 0%, transparentize(v.$negro, .3%) 100%), url($imagen);
