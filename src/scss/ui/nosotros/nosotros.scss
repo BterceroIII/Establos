@@ -1,0 +1,109 @@
+@use 'base/variables' as v;
+@use 'base/mixins' as m;
+
+.contenedorN {
+    max-width: 120rem;
+    margin: 0 auto;
+    width: 90%;
+}
+
+// .nosotros {
+//     display: grid;
+//     grid-template-columns: repeat(2, 1fr);
+//     background-image: url('../img/nosotros.webp');
+//     background-repeat: no-repeat;
+//     background-position: center bottom;
+//     background-size: cover;
+
+//     @include m.desktop {
+//         .nosotros {
+//             grid-template-columns: repeat(3, 1fr);
+//         }
+//     }
+
+//     .contenido-nosotros {
+//         background-color: v.$blanco;
+//         padding: 5rem;
+//     }
+
+//     @include m.desktop {
+//         .contenido-nosotros {
+//             grid-column: 2/4;
+//         }
+//     }
+
+//     .contenido-nosotros h2,
+//     .contenido-nosotros p {
+//         margin-bottom: 1rem;
+//     }
+// }
+
+.nosotros {
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    background-image: url(../img/nosotros.webp);
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    background-size: 90rem;
+    margin-bottom: 5rem;
+
+    &:nth-child(1) {
+        background-image: url(../img/nosotros.webp);
+
+        @media (min-width: 992px) {
+
+            .contenido-nosotros {
+                grid-column: 2/4;
+            }
+
+
+        }
+    }
+
+    &:nth-child(2) {
+        background-image: url(../img/mision.webp);
+    }
+
+    &:nth-child(3) {
+        background-image: url(../img/vision.webp);
+
+        @media (min-width: 992px) {
+
+            .contenido-nosotros {
+                grid-column: 2/4;
+            }
+
+
+        }
+    }
+
+
+}
+
+@media (min-width: 992px) {
+    .nosotros {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+
+}
+
+.contenido-nosotros {
+    background-color: v.$blanco;
+    padding: 5rem;
+}
+
+@media (min-width: 992px) {
+
+    .contenido-nosotros {
+        grid-column: 3/1;
+    }
+
+
+}
+
+
+.contenido-nosotros h2,
+.contenido-nosotros p {
+    margin-bottom: 1rem;
+}
