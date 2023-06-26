@@ -134,6 +134,11 @@ function validarInicioSesion() {
         return false; // Evita que se envíe el formulario si hay campos vacíos
     }
 
+    if (usuario != '' || contrasena === '') {
+        window.location.href = 'establos.html';
+        return false; // Evita que se envíe el formulario si hay campos vacíos
+    }
+
     // Aquí puedes agregar tus validaciones adicionales, como longitud mínima de la contraseña, caracteres permitidos, etc.
 
     // Si todas las validaciones pasan, puedes realizar las acciones de inicio de sesión necesarias.
@@ -168,3 +173,6 @@ function initMap() {
         alert('Tu navegador no admite geolocalización.');
     }
 }
+
+
+
