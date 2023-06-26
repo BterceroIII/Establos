@@ -8,6 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
     <link rel="stylesheet" href="build/css/app.css">
 </head>
 <body>
@@ -29,14 +30,12 @@
                     
                 </div>
                 <nav class="navegacion">
-                    <a class="navegacion__link" href="index.html">Home</a>
+                    <a class="navegacion__link" href="#">Home</a>
+                    <a class="navegacion__link" href="inicioSesion.html">Inicio de Sesion</a>
                     <a class="navegacion__link" href="nosotros.html">Nosotros</a>
-                    <a class="navegacion__link" href="establos.html">Establos</a>
+                    <a class="navegacion__link" href="establos.html">Catalogo</a>
                     <a class="navegacion__link" href="blog.html">Blog</a>
                     <a class="navegacion__link" href="contacto.html">Contacto</a>
-                    <a class="navegacion__link navegacion__link--carrito" href="#">
-                        <i class="fas fa-shopping-cart"></i> Carrito
-                    </a>
                 </nav>
 
                 
@@ -80,7 +79,7 @@
                     </p>
                     <p class="block">
                         <button id="submit-btn">
-                            Enviar
+                            Enviar y mostar su ubicacion
                         </button>
                     </p>
                 </form>
@@ -92,7 +91,8 @@
                     <li><i class="fas fa-phone"></i> (111) 111 111 111</li>
                     <li><i class="fas fa-envelope-open-text"></i> contact@website.com</li>
                 </ul>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero provident ipsam necessitatibus repellendus?</p>
+                <div id="map" style="height: 400px;"></div>
+
                 <p>RealState.com</p>
             </div>
         </div>
@@ -114,14 +114,14 @@
             <div class="footer__box">
                 <h3 class="footer__heading">Nosotros</h3>
                 <p class="footer__texto">
-                    En RealState, nos especializamos en la creación de establos de caballos personalizados de alta calidad para satisfacer las necesidades y gustos de nuestros clientes. Nos enorgullece ofrecer un servicio completo, desde el diseño hasta la construcción y la instalación de nuestros establos, lo que garantiza que nuestros clientes reciban un producto de alta calidad que cumple con sus expectativas.
+                    En HorseState, nos especializamos en la creación de establos de caballos personalizados de alta calidad para satisfacer las necesidades y gustos de nuestros clientes. Nos enorgullece ofrecer un servicio completo, desde el diseño hasta la construcción y la instalación de nuestros establos, lo que garantiza que nuestros clientes reciban un producto de alta calidad que cumple con sus expectativas.
                 </p>
             </div>
 
             <div class="footer__box footer__logo">
                 <a href="index.html">
                     <img src="build/img/logo.svg" alt="logo">
-                    Real<span>State</span>
+                    Horse<span>State</span>
                 </a>
             </div>
         </div>
@@ -131,6 +131,7 @@
 
     <script src="js/formulario.js"></script>
     <script src="js/app.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
     <script src="js/nav.js"></script>
     <script src="https://kit.fontawesome.com/91c2d92c81.js" crossorigin="anonymous"></script>
 
