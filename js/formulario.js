@@ -108,6 +108,7 @@ function simulateFormSubmission() {
     const successMessage = document.createElement('p');
     successMessage.textContent = 'Su solicitud ha sido enviada. ¡Gracias!';
     successMessage.style.color = 'green';
+    initMap();
 
     form.appendChild(successMessage);
 
@@ -116,4 +117,54 @@ function simulateFormSubmission() {
         form.reset();
         successMessage.remove();
     }, 3000);
+}
+
+
+function validarInicioSesion() {
+    var usuario = document.getElementById('usuario').value;
+    var contrasena = document.getElementById('contrasena').value;
+
+    if (usuario === '' || contrasena === '') {
+        alert('Por favor, completa todos los campos.');
+        return false; // Evita que se envíe el formulario si hay campos vacíos
+    }
+
+    if (usuario === 'btercero' || contrasena === '123') {
+        window.location.href = 'pageAdmin.html';
+        return false; // Evita que se envíe el formulario si hay campos vacíos
+    }
+
+    // Aquí puedes agregar tus validaciones adicionales, como longitud mínima de la contraseña, caracteres permitidos, etc.
+
+    // Si todas las validaciones pasan, puedes realizar las acciones de inicio de sesión necesarias.
+    // Por ejemplo, puedes enviar el formulario o redirigir a otra página.
+}
+
+
+function initMap() {
+    // Obtiene la ubicación del usuario utilizando geolocalización del navegador
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(function (position) {
+            var lat = position.coords.latitude;
+            var lng = position.coords.longitude;
+
+            // Crea un objeto LatLng con la ubicación obtenida
+            var latLng = L.latLng(lat, lng);
+
+            // Crea el mapa y establece la vista en la ubicación del usuario
+            var map = L.map('map').setView(latLng, 14);
+
+            // Crea una capa de mapa base utilizando OpenStreetMap
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors',
+                maxZoom: 18
+            }).addTo(map);
+
+            // Crea un marcador en la ubicación del usuario
+            L.marker(latLng).addTo(map).bindPopup('Tu ubicación');
+        });
+    } else {
+        // Si la geolocalización no está disponible, muestra un mensaje de error
+        alert('Tu navegador no admite geolocalización.');
+    }
 }

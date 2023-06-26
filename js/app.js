@@ -8,3 +8,5 @@ window.addEventListener('scroll', () => {
         imagen.style.backgroundPositionY = `${scroll}px`;
     })
 });
+
+
