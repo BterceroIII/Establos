@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real State</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="build/css/app.css">
+    <link rel="stylesheet" href="build/css/inicio.css">
+</head>
+<body>
+    <div class="login-box">
+        <h1>Inicio Sesión</h1>
+        <form onsubmit="return validarInicioSesion()">
+            <!-- USERNAME INPUT -->
+            <label for="usuario">Nombre de usuario</label>
+            <input type="text" id="usuario" placeholder="Escribe tu usuario" >
+            <!-- PASSWORD INPUT -->
+            <label for="contrasena">Contraseña</label>
+            <input type="password" id="contrasena" placeholder="Escribe tu contraseña" >
+            <input type="submit" value="Iniciar Sesión">
+        </form>
+    </div>
+    
+    <script src="js/formulario.js"></script>
+</body>
+</html>
