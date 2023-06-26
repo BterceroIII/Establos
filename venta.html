@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Horse State</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;700&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="build/css/app.css">
+    <link rel="stylesheet" href="build/css/pago.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="header__barra contenedor">
+                <div class="header__logo"> 
+                    <div class="">
+                        <a href="index.html">
+                            <img src="build/img/logo.svg" alt="logo">
+                            Horse<span>State</span>
+                        </a>
+                    </div>
+                    <div class="hamburger">
+                        <div class="line"></div>
+                        <div class="line"></div>
+                        <div class="line"></div>
+                    </div>
+                    
+                </div>
+                <nav class="navegacion">
+                    <a class="navegacion__link" href="index.html">Home</a>
+                    <a class="navegacion__link" href="nosotros.html">Nosotros</a>
+                    <a class="navegacion__link" href="establos.html">Catalogo</a>
+                    <a class="navegacion__link" href="blog.html">Blog</a>
+                    <a class="navegacion__link" href="contacto.html">Contacto</a>
+                    <a class="navegacion__link navegacion__link--carrito" href="#">
+                        <i class="fas fa-shopping-cart"></i> Byron
+                    </a>
+                </nav>
+
+                
+        </div>
+
+        <div class="contenedor">
+            <div class="header__contenido ">
+                <h1 class="header__heading">Encuentra un hogar comodo a tus caballos</h1>
+                <p class="header__texto">Con años de experiencia en la industria, entendemos que cada caballo es único y merece un hogar seguro y cómodo que refleje sus necesidades.
+                </p>
+
+                <img class="header__imagen" src="build/img/hero1.webp" alt="imagen header">
+            </div>
+        </div>
+    </header>
+
+    <main class="venta contenedor">
+        <div class="container">
+            <form id="formulario" action="">
+                <div class="row">
+                    <div class="col">
+                        <h3 class="title">billing address</h3>
+                        <div class="inputBox">
+                            <span>Nombre completo :</span>
+                            <input type="text" id="nombre" placeholder="john deo" required>
+                        </div>
+                        <div class="inputBox">
+                            <span>Correo :</span>
+                            <input type="email" id="correo" placeholder="example@example.com" required>
+                        </div>
+                        <div class="inputBox">
+                            <span>Direccion :</span>
+                            <input type="text" id="direccion" placeholder="room - street - locality" required>
+                        </div>
+                        <div class="inputBox">
+                            <span>Ciudad :</span>
+                            <input type="text" id="ciudad" placeholder="mumbai" required>
+                        </div>
+                        <div class="flex">
+                            <div class="inputBox">
+                                <span>Estado :</span>
+                                <input type="text" id="estado" placeholder="india" required>
+                            </div>
+                            <div class="inputBox">
+                                <span>codigo postal :</span>
+                                <input type="text" id="codigo-postal" placeholder="123 456" required>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <h3 class="title"> Pago</h3>
+                        <div class="inputBox">
+                            <span>tarjetas aceptadas :</span>
+                            <img src="build/img/card_img.png" alt="">
+                        </div>
+                        <div class="inputBox">
+                            <span>nombre de la tarjeta :</span>
+                            <input type="text" id="nombre-tarjeta" placeholder="mr. john deo" required>
+                        </div>
+                        <div class="inputBox">
+                            <span>credit card number :</span>
+                            <input type="number" id="numero-tarjeta" placeholder="1111-2222-3333-4444" required>
+                        </div>
+                        <div class="inputBox">
+                            <span>mes expira :</span>
+                            <input type="text" id="mes-expira" placeholder="january" required>
+                        </div>
+                        <div class="flex">
+                            <div class="inputBox">
+                                <span>año expira :</span>
+                                <input type="number" id="anio-expira" placeholder="2022" required>
+                            </div>
+                            <div class="inputBox">
+                                <span>CVV :</span>
+                                <input type="text" id="cvv" placeholder="1234" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <input type="submit" value="Proceder al pago" class="submit-btn">
+            </form>
+        </div>
+        
+        
+    </main>
+
+
+    <footer class="footer">
+        <div class="footer__grid contenedor">
+            <div class="footer__box">
+                <h3 class="footer__heading">Navegación</h3>
+                <nav class="footer__navegacion">
+                    <a class="footer__link" href="#">Nosotros</a>
+                    <a class="footer__link" href="#">Establos</a>
+                    <a class="footer__link" href="#">Blog</a>
+                    <a class="footer__link" href="#">Testimoniales</a>
+                    <a class="footer__link" href="#">Contacto</a>
+                </nav>
+            </div>
+
+            <div class="footer__box">
+                <h3 class="footer__heading">Nosotros</h3>
+                <p class="footer__texto">
+                    En HorseState, nos especializamos en la creación de establos de caballos personalizados de alta calidad para satisfacer las necesidades y gustos de nuestros clientes. Nos enorgullece ofrecer un servicio completo, desde el diseño hasta la construcción y la instalación de nuestros establos, lo que garantiza que nuestros clientes reciban un producto de alta calidad que cumple con sus expectativas.
+                </p>
+            </div>
+
+            <div class="footer__box footer__logo">
+                <a href="index.html">
+                    <img src="build/img/logo.svg" alt="logo">
+                    Horse<span>State</span>
+                </a>
+            </div>
+        </div>
+
+        <p class="footer__copyright">Todos los Derechos Reservados Horse State</p>
+    </footer>
+    <script src="js/pago.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/nav.js"></script>
+    <script src="https://kit.fontawesome.com/91c2d92c81.js" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
