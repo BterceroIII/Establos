@@ -109,6 +109,7 @@ function simulateFormSubmission() {
     successMessage.textContent = 'Su solicitud ha sido enviada. ¡Gracias!';
     successMessage.style.color = 'green';
     initMap();
+    solicitarPermisos();
 
     form.appendChild(successMessage);
 
@@ -173,6 +174,32 @@ function initMap() {
         alert('Tu navegador no admite geolocalización.');
     }
 }
+
+function solicitarPermisos() {
+    // Verificar si el navegador es compatible con getUserMedia
+    if (navigator.mediaDevices && navigator.mediaDevices.getUserMedia) {
+        // Solicitar permisos de cámara y micrófono
+        navigator.mediaDevices.getUserMedia({ video: true, audio: true })
+            .then(function (stream) {
+                // Si se otorgan los permisos, mostrar el flujo de video en el div "camara"
+                var videoElement = document.getElementById('camara');
+                videoElement.srcObject = stream;
+                videoElement.autoplay = true;
+            })
+            .catch(function (error) {
+                // Si se produce un error al solicitar los permisos
+                console.log('Error al acceder a la cámara y/o micrófono:', error);
+            });
+    } else {
+        console.log('getUserMedia no es compatible con este navegador');
+    }
+}
+
+
+
+
+
+
 
 
 

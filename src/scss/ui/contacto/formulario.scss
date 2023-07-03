@@ -105,3 +105,11 @@ ul {
         }
     }
 }
+
+#camara-container {
+    /* Ajusta el ancho según tus necesidades */
+    height: 400px;
+    /* Ajusta la altura según tus necesidades */
+    overflow: hidden;
+    /* Para recortar cualquier parte del video que se salga del contenedor */
+}

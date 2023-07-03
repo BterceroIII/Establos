@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css */
 /* Document
    ========================================================================== */
@@ -1184,6 +1185,14 @@ ul {
   .contact-wrapper > .contact-info h4, .contact-wrapper > .contact-info ul, .contact-wrapper > .contact-info p {
     text-align: left;
   }
+}
+
+#camara-container {
+  /* Ajusta el ancho según tus necesidades */
+  height: 400px;
+  /* Ajusta la altura según tus necesidades */
+  overflow: hidden;
+  /* Para recortar cualquier parte del video que se salga del contenedor */
 }
 
 .contenedorN {
