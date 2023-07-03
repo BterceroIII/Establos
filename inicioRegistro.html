@@ -13,17 +13,21 @@
 </head>
 <body>
     <div class="login-box">
-        <h1>Inicio Sesión</h1>
+        <h1>Registrar usuario</h1>
         <form onsubmit="return validarInicioSesion()">
             <!-- USERNAME INPUT -->
             <label for="usuario">Nombre de usuario</label>
             <input type="text" id="usuario" placeholder="Escribe tu usuario" >
+
+            <label for="usuario">correo</label>
+            <input type="email" id="usuario" placeholder="Escribe tu correo" >
             <!-- PASSWORD INPUT -->
             <label for="contrasena">Contraseña</label>
             <input type="password" id="contrasena" placeholder="Escribe tu contraseña" >
+
+            <label for="contrasena">Confirmar Contraseña</label>
+            <input type="password" id="contrasena" placeholder="Escribe tu contraseña" >
             <input type="submit" value="Iniciar Sesión">
-            <a href="#">Olvidaste tu contrasena?</a><br>
-            <a href="inicioRegistro.html">Registrate</a>
         </form>
     </div>
     
